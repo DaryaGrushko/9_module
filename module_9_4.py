@@ -17,12 +17,8 @@ def get_advanced_writer(file_name):
 
     def  write_everything(*data_set):
         for data in data_set:
-            if isinstance(data, list):
-
-                write_everything(*data)
-            else:
-                with open(file_name, 'a', encoding='utf-8') as file:
-                    file.write(str(data)  + '\n')
+            with open(file_name, 'a', encoding='utf-8') as file:
+                file.write(str(data) + '\n')
 
     return write_everything
 
